@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1624745245 source:c:\users\santi\onedrive\documentos\trabajos codeblocks\tpintegrador\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	"../funciones.h"
+
+1624745335 c:\users\santi\onedrive\documentos\trabajos codeblocks\funciones.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+
+1624869486 source:c:\users\eze\onedrive - frgp.utn.edu.ar\escritorio\tpintegrador\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	"funciones.h"
+	"rlutil.h"
+
+1624821359 c:\users\eze\onedrive - frgp.utn.edu.ar\escritorio\tpintegrador\funciones.h
+	<cstdlib>
+	<cstdio>
+	<ctime>
+
+1571584339 c:\users\eze\onedrive - frgp.utn.edu.ar\escritorio\tpintegrador\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
