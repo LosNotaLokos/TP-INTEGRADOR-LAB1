@@ -15,11 +15,11 @@ using namespace std;
 
 
 int main (){
-    int i,opc,posMax,ron,u,y,f,ronPerd=0,ronEmp=0;
+    int i,opc,posMax,ron,u,y,f,ronPerd=0,ronEmp=0,puntosMax=0;
     srand(time(NULL));
     int v[5];
 
-    string nombreJ1,nombreJ2,nombreJ3,JugadorG;
+    string nombreJ1,nombreJ2,nombreJ3,JugadorG,jugadorPM;
 
     while(true){
             int puntosT=20,puntosApos,puntosAposJ1,puntosAposJ2,puntajeG;
@@ -152,6 +152,11 @@ int main (){
         cout<<"Puntos al final: "<<puntosT<<endl;
         cout<<"Rondas perdidas: "<<ronPerd<<endl;
         cout<<"Rondas empatadas: "<<ronEmp<<endl;
+
+        if(puntosMax<puntosT){
+            puntosMax=puntosT;
+            jugadorPM=nombreJ1;
+            }
         system("pause");
         }
             break;
@@ -376,12 +381,23 @@ int main (){
                     JugadorG=nombreJ2;
                     puntajeG=puntosTJ2;
                     }
+
         };
         cout<<"Felicidades "<<JugadorG<<" ganaste LA PARTIDA"<<endl;
         cout<<"Puntos totales: "<<puntajeG<<endl;
+
+        if(puntosMax<puntajeG){
+            puntosMax=puntajeG;
+            jugadorPM=JugadorG;
+        }
         system("pause");
             break;
         case 3:
+            {
+            cout<<"Jugador con mas puntaje: "<<jugadorPM<<endl;
+            cout<<"Puntaje: "<<puntosMax<<endl;
+            system("pause");
+            }
             break;
         case 4:
             break;
@@ -394,6 +410,7 @@ int main (){
 
 
     }
+
 
 
 system("pause");
