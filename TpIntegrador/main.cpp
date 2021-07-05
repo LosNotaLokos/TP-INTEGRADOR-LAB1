@@ -60,7 +60,7 @@ int main (){
                 system("pause");
                 };
 
-                if(sumaDados<2000){
+                if(sumaDados<20){
                     ronPerd++;
                     puntosT=puntosT-puntosApos;
                     cout<<"Solo juntaste: "<<sumaDados<<" de puntaje :c Suerte la proxima!"<<endl;
@@ -394,12 +394,136 @@ int main (){
             break;
         case 3:
             {
-            cout<<"Jugador con mas puntaje: "<<jugadorPM<<endl;
-            cout<<"Puntaje: "<<puntosMax<<endl;
+            if(puntosMax!=0){
+                cout<<"Jugador con mas puntaje: "<<jugadorPM<<endl;
+                cout<<"Puntaje: "<<puntosMax<<endl;
+            }else{
+                cout<<"Juegue una partida para mostrar las estadisticas"<<endl;
+            }
             system("pause");
             }
             break;
         case 4:
+            {
+                int perdiste=0;
+            cout<<"Ingrese nombre de jugador: \t";
+            cin>>nombreJ1;
+            cout<<"Rondas a jugar: \t";
+            cin>>ron;
+            cout<<"Tiene "<<puntosT<<" puntos"<<endl;
+            cout<<"Ingrese los puntos a apostar: \t";
+            cin>>puntosApos;
+            if(puntosApos<=puntosT){
+            for (y=1;y<=ron;y++){
+                if(puntosT>0){
+                cout<<"Ronda: "<<y<<endl;
+                int sumaDados=0;
+                int contt=1;
+                int down=5;
+                for (u=1;u<6;u++){
+                cargarVector(v,down);
+                mostrarVector(v,down);
+                sumaDados+=v[maximoVector(v,down)];
+                cout<<"Tirada N: "<<contt++<<endl;
+                down--;
+                system("pause");
+                };
+
+                if(sumaDados<20){
+                    ronPerd++;
+                    puntosT=puntosT-puntosApos;
+                    cout<<"Solo juntaste: "<<sumaDados<<" de puntaje :c Suerte la proxima!"<<endl;
+                }else{
+                    cout<<"Puntaje acumulado en las 5 tiradas: "<<sumaDados<<endl;
+                    cout<<">>>Tiro de puntaje<<<"<<endl;
+                    //cargarAleatorio(v,5,6);
+                    cargarVector(v,5);
+                    down=5;
+                    mostrarVector(v,down);
+                    int cantMul,puntosR=0;
+                    switch (sumaDados)
+                    {
+                    case 20:cantMul=contarNumerosRepetidos(v,1,5);
+                            cout<<"Se repite el numero >1< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){
+                                cout<<"No salio tu numero multiplicador :c"<<endl;
+                                ronEmp++;
+                            };
+                        break;
+                    case 21:cantMul=contarNumerosRepetidos(v,2,5);
+                            cout<<"Se repite el numero >2< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){ronEmp++;cout<<"No salio tu numero multiplicador :c"<<endl;
+                            };
+                        break;
+                    case 22:cantMul=contarNumerosRepetidos(v,3,5);
+                            cout<<"Se repite el numero >3< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){ronEmp++;cout<<"No salio tu numero multiplicador :c"<<endl;
+                            };
+                        break;
+                    case 23:cantMul=contarNumerosRepetidos(v,4,5);
+                            cout<<"Se repite el numero >4< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){ronEmp++;cout<<"No salio tu numero multiplicador :c"<<endl;
+                            };
+                        break;
+                    case 24:cantMul=contarNumerosRepetidos(v,5,5);
+                            cout<<"Se repite el numero >5< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){ronEmp++;cout<<"No salio tu numero multiplicador :c"<<endl;
+                            };
+                        break;
+                    default:cantMul=contarNumerosRepetidos(v,6,5);
+                            cout<<"Se repite el numero >6< "<<cantMul<<" veces."<<endl;
+                            puntosR=puntosApos*cantMul;
+                            if (puntosR>=puntosApos){
+                                cout<<"Ganaste "<<puntosR<<" puntos!!";
+                                puntosT=puntosT+puntosR;
+                                cout<<"Total acumulado: "<<puntosT<<" puntos"<<endl;
+                            };if (cantMul==0){ronEmp++;cout<<"No salio tu numero multiplicador :c"<<endl;
+                            };
+                        break;
+                    }
+
+
+                    }
+                    system("pause");
+            }else{
+                perdiste=1;
+                }
+            };
+            if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROX PA"<<endl;}
+            }else{
+                cout<<"No tenes esa cantidad!"<<endl;
+            };
+        cout<<"Jugador: "<<nombreJ1<<endl;
+        cout<<"Puntos al final: "<<puntosT<<endl;
+        cout<<"Rondas perdidas: "<<ronPerd<<endl;
+        cout<<"Rondas empatadas: "<<ronEmp<<endl;
+        system("pause");
+            }
             break;
         case 0: return 0;
             break;

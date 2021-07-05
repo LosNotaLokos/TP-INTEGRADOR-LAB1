@@ -130,9 +130,15 @@ bool compararVectores(int v[], int v2[],int tam ){
 }
 
 void cargarVector(int v[], int tam){
-    int i;
+    int i,n;
     for(i=0;i<tam;i++){
-        cout<<"INGRESE NUMERO: ";
-        cin>>v[i];
+        cout<<"INGRESE NUMERO DEL 1 AL 6: ";
+        cin>>n;
+        if((n<7)&&(n>0)){
+            v[i]=n;
+        }else{
+            cout<<"Se ingreso un numero incorrecto, se asigno un 1 en esa posicion"<<endl;
+            v[i]=1;
+        }
     }
 }
