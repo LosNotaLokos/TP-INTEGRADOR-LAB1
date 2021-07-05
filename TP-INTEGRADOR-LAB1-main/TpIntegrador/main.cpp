@@ -1,7 +1,7 @@
 //Ejercicio: TP Integrador Dados 20
-//Autor: Carrozzi Santiago
+//Autor: Carrozzi Santiago, Ezequiel Elizalde
 //Fecha:26/6/2021
-//Comentario:
+//Comentario:FIUMBA
 
 #include<iostream>
 #include<cstdlib>
@@ -165,12 +165,12 @@ int main (){
             };
             if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROX PA"<<endl;}
             }else{
-                cout<<"No tenes esa cantidad!"<<endl;
+                cout<<"No esta en los valores permitidos"<<endl;
             };
         cout<<"Jugador: "<<nombreJ1<<endl;
         cout<<"Puntos al final: "<<puntosT<<endl;
         cout<<"Rondas perdidas: "<<ronPerd<<endl;
-        cout<<"Rondas empatadas: "<<ronEmp<<endl;
+        cout<<"Rondas sin puntos: "<<ronEmp<<endl;
 
         if(puntosMax<puntosT){
             puntosMax=puntosT;
@@ -475,7 +475,6 @@ int main (){
                 }else{
                     cout<<"Puntaje acumulado en las 5 tiradas: "<<sumaDados<<endl;
                     cout<<">>>Tiro de puntaje<<<"<<endl;
-                    //cargarAleatorio(v,5,6);
                     cargarVector(v,5);
                     down=5;
                     mostrarVector(v,down);

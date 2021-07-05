@@ -66,3 +66,30 @@
 	<sys/types.h>
 	<sys/time.h>
 
+1625489891 source:c:\users\eze\onedrive - frgp.utn.edu.ar\documentos\github\tp-integrador-lab1\tp-integrador-lab1-main\tpintegrador\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	"funciones.h"
+	"rlutil.h"
+
+1625489891 c:\users\eze\onedrive - frgp.utn.edu.ar\documentos\github\tp-integrador-lab1\tp-integrador-lab1-main\tpintegrador\funciones.h
+	<cstdlib>
+	<cstdio>
+	<ctime>
+
+1625489891 c:\users\eze\onedrive - frgp.utn.edu.ar\documentos\github\tp-integrador-lab1\tp-integrador-lab1-main\tpintegrador\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
