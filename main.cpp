@@ -148,14 +148,14 @@ int main (){
                         break;
                     }
                     }
-                    cout<<"Apreta pa seguir pa"<<endl;
+                    cout<<"Apreta para seguir"<<endl;
                     rlutil::anykey();
                     rlutil::cls();
             }else{
                 perdiste=1;
                 }
             };
-            if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROX PA"<<endl;}
+            if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROXIMA"<<endl;}
             }else{
                 cout<<"No esta en los valores permitidos"<<endl;
             };
@@ -279,7 +279,7 @@ int main (){
                         break;
                     }
                     }
-                    cout<<"apreta pa seguir pa"<<endl;
+                    cout<<"Apreta para seguir"<<endl;
                     rlutil::anykey();
                     rlutil::cls();
             };
@@ -385,7 +385,7 @@ int main (){
                         break;
                     }
                     }
-                    cout<<"apreta pa seguir pa"<<endl;
+                    cout<<"apreta para seguir"<<endl;
                     rlutil::anykey();
                     rlutil::cls();
             };
@@ -416,7 +416,7 @@ int main (){
             }else{
                 cout<<"Juegue una partida para mostrar las estadisticas"<<endl;
             }
-            cout<<"apreta pa salir mono"<<endl;
+            cout<<"Apreta para salir"<<endl;
             rlutil::anykey();
             }
             break;
@@ -526,14 +526,14 @@ int main (){
                         break;
                     }
                     }
-                    cout<<"apreta pa seguir loro";
+                    cout<<"apreta para seguir";
                     rlutil::anykey();
                     rlutil::cls();
             }else{
                 perdiste=1;
                 }
             };
-            if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROX PA"<<endl;}
+            if(perdiste=1){cout<<"PERDISTE SUERTE EN LA PROXIMA"<<endl;}
             }else{
                 cout<<"No tenes esa cantidad!"<<endl;
             };
